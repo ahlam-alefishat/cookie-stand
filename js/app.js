@@ -235,8 +235,9 @@ shopLocation4.randomCust();
 shopLocation4.amountsOfCookies();
 shopLocation4.totalCookie();
 shopLocation4.render();
-console.log(shopLocation4);
+console.log(shopLocationz);
 ////////////////////////////////////////////////////////////////////////
+
 var shopLocation5 = {
     
     name: 'Lima',
@@ -295,4 +296,3 @@ shopLocation5.amountsOfCookies();
 shopLocation5.totalCookie();
 shopLocation5.render();
 console.log(shopLocation5);
-
