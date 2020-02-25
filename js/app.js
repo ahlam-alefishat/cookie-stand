@@ -47,8 +47,38 @@ shop.prototype.render = function () {
     console.log(container);
 }
 shop.prototype.header = function () {
+    var trE2 = document.createElement('tr');
+    table.appendChild(trE2);
+  var thE2 = document.createElement('th');
+  trE2.appendChild(thE2);
+  thE2.textContent = `------------`;
+  
 
+  for (var i = 0; i < hours.length; i++) {
+    thE2 = document.createElement('th');
+    thE2.textContent = hours[i];
+    trE2.appendChild(thE2);
+     console.log(thE2);
+  }
+  var thE3 = document.createElement('th');
+  thE3.textContent = '/Location-Total';
+  trE2.appendChild(thE3);
+  console.log(table);
+  table.appendChild(trE2);
 }
+
+shop.prototype.footer= function(){
+     
+        var trE3 = document.createElement('tr');
+        table.appendChild(trE3);
+        var thE4 = document.createElement('th');
+        trE3.appendChild(thE4);
+        thE4.textContent = 'total';
+      
+        Console.log(table);
+      }
+
+
 
 
 
@@ -58,7 +88,7 @@ var dubai = new shop('Dubai', 11, 38, 3.7);
 var paris = new shop('Paris', 20, 38, 2.3);
 var lima = new shop('Lima', 2, 16, 4.6);
 
-
+seattle.header();
 
 
   for (var i = 0; i < shops.length; i++) {
@@ -66,7 +96,7 @@ var lima = new shop('Lima', 2, 16, 4.6);
     shops[i].amountsOfCookies();
     shops[i].totalCookie1();
     shops[i].render();
-    shops[i].header();
+    
     
     
 }
