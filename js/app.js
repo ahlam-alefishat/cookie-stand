@@ -108,12 +108,9 @@ function footer() {
 
         count+=shops[j].cookiesPerCust[i];
     }
-
     count++
     final+=count;
     tdE5.textContent=count;
-
-  
     }
 
     var tdE3 = document.createElement('td');
