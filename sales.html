@@ -19,7 +19,35 @@
          </ul>
     </header>
     <main> 
-        <div id="ShopsLocation">
+        <p>
+            <img src="img/chinook.jpg" > 
+        </p>
+        
+        <form  id ='salesForm'>
+            <fieldset>
+              <legend>Location information</legend>
+              <label for="name">Shop name</label>
+              <input type="text" placeholder="Name" id='name'>
+              <br>
+              <br>
+              <label for="minCust">Minimum number of customers </label>
+              <input type="number" placeholder="0" id="minCust" min="1">
+              <br>
+              <br>
+              <label for="maxCust">Maximum number of customers </label>
+              <input type="number" placeholder="0" id="maxCust" max="" >
+              <br>
+              <br>
+              <label for="avg">Average number of customers </label>
+              <input type="float"  placeholder="0.0"  id="avg">
+              <br>
+              <br>
+              <input type="submit">
+            </fieldset>
+          </form>
+         <br>
+
+          <div id="ShopsLocation">
         </div>
     </main>
     <footer></footer> 
