@@ -96,7 +96,7 @@ function footer() {
     var tdE4 = document.createElement('td');
     trE3.appendChild(tdE4);
     tdE4.textContent ='Totals';
-    var sum=0;
+   
     var final=0;
 
     for (var i = 0; i < hours.length; i++) {
@@ -108,7 +108,6 @@ function footer() {
 
         count+=shops[j].cookiesPerCust[i];
     }
-    count++
     final+=count;
     tdE5.textContent=count;
     }
