@@ -124,14 +124,11 @@ myForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
     var name = event.target.name.value;
-    console.log(name);
     var minCust = parseInt(event.target.minCust.value);
-    console.log(minCust);
     var maxCust = parseInt(event.target.maxCust.value);
-    console.log(maxCust);
     var avg = parseFloat(event.target.avg.value);
 
-    console.log(avg);
+
     if (event.target.maxCust.value <= event.target.minCust.value) {
         alert('The maximum number of customer should be bigger ');
     }
