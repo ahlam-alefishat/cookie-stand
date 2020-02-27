@@ -36,8 +36,8 @@ shop.prototype.totalCookies = function () {
 }
 
 
- var container = document.getElementById('ShopsLocation');
-    
+var container = document.getElementById('ShopsLocation');
+
 var tableE1 = document.createElement('table');
 container.appendChild(tableE1);
 
@@ -124,19 +124,15 @@ myForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
     var name = event.target.name.value;
-    console.log(name);
     var minCust = parseInt(event.target.minCust.value);
-    console.log(minCust);
     var maxCust = parseInt(event.target.maxCust.value);
-    console.log(maxCust);
     var avg = parseFloat(event.target.avg.value);
 
-    console.log(avg);
+
     if (event.target.maxCust.value <= event.target.minCust.value) {
         alert('The maximum number of customer should be bigger ');
     }
     else {
-
         tableE1.removeChild(tableE1.lastChild);
         var shopobj = new shop(name, minCust, maxCust, avg);
         shopobj.randomCust();
@@ -149,6 +145,8 @@ myForm.addEventListener('submit', function (event) {
 
     myForm.reset();
 })
+footer();
+
 
 
 
