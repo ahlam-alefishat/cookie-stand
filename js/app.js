@@ -27,7 +27,7 @@ shop.prototype.cookiesPerHour = function () {
 
     }
 }
-shop.prototype.totalCookies= function () {
+shop.prototype.totalCookies = function () {
     var sum = 0;
     for (var j = 0; j < this.cookiesPerCust.length; j++) {
         sum = sum + this.cookiesPerCust[j];
@@ -36,12 +36,12 @@ shop.prototype.totalCookies= function () {
 }
 
 
-
+ var container = document.getElementById('ShopsLocation');
+    
 var tableE1 = document.createElement('table');
+container.appendChild(tableE1);
 
 shop.prototype.render = function () {
-    var container = document.getElementById('ShopsLocation');
-    container.appendChild(tableE1);
     var tr = document.createElement('tr');
     tableE1.appendChild(tr);
 
@@ -62,7 +62,7 @@ shop.prototype.render = function () {
 function helper() {
     var tr = document.createElement('tr');
     tableE1.appendChild(tr);
-    var th= document.createElement('th');
+    var th = document.createElement('th');
     tr.appendChild(th);
     th.textContent = `Location :`;
     for (var i = 0; i < hours.length; i++) {
@@ -70,20 +70,14 @@ function helper() {
         th.textContent = hours[i];
         tr.appendChild(th);
     }
-    var th= document.createElement('th');
+    var th = document.createElement('th');
     th.textContent = '/Daily Location Total';
     tr.appendChild(th);
     tableE1.appendChild(tr);
 }
 
 
-function footer () {
-    var tr = document.createElement('tr');
-    tableE1.appendChild(tr);
-    var td = document.createElement('td');
-    tr.appendChild(td);
-    
-
+function footer() {
     var tr = document.createElement('tr');
     tableE1.appendChild(tr);
     var td = document.createElement('td');
@@ -114,8 +108,8 @@ var dubai = new shop('Dubai', 11, 38, 3.7);
 var paris = new shop('Paris', 20, 38, 2.3);
 var lima = new shop('Lima', 2, 16, 4.6);
 
-
 helper();
+
 
 for (var i = 0; i < shops.length; i++) {
     shops[i].randomCust();
@@ -124,31 +118,39 @@ for (var i = 0; i < shops.length; i++) {
     shops[i].render();
 }
 
+
 var myForm = document.getElementById('salesForm');
 myForm.addEventListener('submit', function (event) {
     event.preventDefault();
+
     var name = event.target.name.value;
     console.log(name);
-    var minCust =parseInt(event.target.minCust.value);
+    var minCust = parseInt(event.target.minCust.value);
     console.log(minCust);
-    var maxCust =parseInt(event.target.maxCust.value);
+    var maxCust = parseInt(event.target.maxCust.value);
     console.log(maxCust);
     var avg = parseFloat(event.target.avg.value);
+
     console.log(avg);
-
-    var shopobj = new shop(name, minCust, maxCust, avg);
-
-    shopobj.randomCust();
-    shopobj.cookiesPerHour();
-    shopobj.totalCookies();
-    shopobj.render();
     if (event.target.maxCust.value <= event.target.minCust.value) {
-        
         alert('The maximum number of customer should be bigger ');
     }
+    else {
+
+        tableE1.removeChild(tableE1.lastChild);
+        var shopobj = new shop(name, minCust, maxCust, avg);
+        shopobj.randomCust();
+        shopobj.cookiesPerHour();
+        shopobj.totalCookies();
+        shopobj.render();
+
+    }
+    footer();
+
     myForm.reset();
 })
-footer();
+
+
 
 
 
