@@ -149,6 +149,8 @@ myForm.addEventListener('submit', function (event) {
 
     myForm.reset();
 })
+footer();
+
 
 
 
