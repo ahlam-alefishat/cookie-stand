@@ -36,8 +36,8 @@ shop.prototype.totalCookies = function () {
 }
 
 
- var container = document.getElementById('ShopsLocation');
-    
+var container = document.getElementById('ShopsLocation');
+
 var tableE1 = document.createElement('table');
 container.appendChild(tableE1);
 
@@ -136,7 +136,6 @@ myForm.addEventListener('submit', function (event) {
         alert('The maximum number of customer should be bigger ');
     }
     else {
-
         tableE1.removeChild(tableE1.lastChild);
         var shopobj = new shop(name, minCust, maxCust, avg);
         shopobj.randomCust();
