@@ -129,22 +129,25 @@ myForm.addEventListener('submit', function (event) {
     var avg = parseFloat(event.target.avg.value);
 
 
-    if (event.target.maxCust.value <= event.target.minCust.value) {
-        alert('The maximum number of customer should be bigger ');
-    }
-    else {
+    if (maxCust > minCust) {
         tableE1.removeChild(tableE1.lastChild);
         var shopobj = new shop(name, minCust, maxCust, avg);
         shopobj.randomCust();
         shopobj.cookiesPerHour();
         shopobj.totalCookies();
         shopobj.render();
+        footer();
 
     }
-    footer();
+
+
+    else {
+        alert('The maximum number of customer should be bigger ');
+    }
+
 
     myForm.reset();
-})
+});
 footer();
 
 
