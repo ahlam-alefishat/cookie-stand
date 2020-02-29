@@ -1,0 +1,99 @@
+body {
+    margin: auto;
+    background-color: rgb(245, 250, 179);
+}
+
+header{
+
+    background-color: rgb(245, 245, 178);
+    color: chocolate;
+}
+
+h1 {
+    text-align: center;
+margin-bottom:50px;
+font-size: xx-large;
+font-family:'Abril Fatface';
+
+}
+
+header img{
+    
+    margin-left: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul li a{
+    float: left;
+    text-decoration: none;
+    padding-left: 100px;
+text-align: center;
+
+    color: chocolate;
+
+
+}
+
+li{
+    padding-bottom: 200px;
+    display: inline;
+    padding-left: 50px;
+    text-align: center;
+    font-size:large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+#chinook{
+    padding-left: 500px;
+}
+
+ td {
+    border: 1px solid chocolate;
+    font-family: 'Abril Fatface', ;
+}
+table {
+    border: 1px solid chocolate;
+    color:chocolate;
+    border-radius:2px;
+    margin-left: 250px;
+    
+    
+}
+
+form fieldset legend
+{
+    text-align: center;
+    color: rgb(231, 122, 19);
+}
+
+label
+{
+padding-left: 500px;
+color:rgb(97, 47, 11);
+font-family: sans-serif;
+}
+#submit{
+    margin-left: 850px;
+    color:rgb(97, 47, 11);
+    border-radius: 5px;
+    padding-left:50px;
+    height: 50px;
+    width: 150px;
+    text-align: justify;
+    background-color: rgb(204, 129, 75);
+}
+ h2{
+    text-align: center;
+    margin-bottom:50px;
+    font-size: x-large;
+    font-family:'Abril Fatface';
+}
+
+footer{
+    background-color: rgb(51, 23, 3);
+padding-top: 30px;
+    color: floralwhite;
+    text-align: center;
+    margin-top: 500px;
+}

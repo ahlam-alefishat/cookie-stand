@@ -1,57 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/sale.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+
 </head>
+
 <body>
+
     <header>
+
         <h1>Salmon Cookies </h1>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="index.html">Home</a></li> 
             <li><a href="sales.html">Sales</a></li>
-            
-         </ul>
-    </header>
-    <main> 
-        <p>
-            <img src="img/chinook.jpg" > 
-        </p>
-        
-        <form  id ='salesForm'>
-            <fieldset>
-              <legend>Location information</legend>
-              <label for="name">Shop name</label>
-              <input type="text" placeholder="Name" id='name'>
-              <br>
-              <br>
-              <label for="minCust">Minimum number of customers </label>
-              <input type="number" placeholder="0" id="minCust" min="1">
-              <br>
-              <br>
-              <label for="maxCust">Maximum number of customers </label>
-              <input type="number" placeholder="0" id="maxCust" min="1" >
-              <br>
-              <br>
-              <label for="avg">Average number of customers </label>
-              <input type="float"  placeholder="0.0"  id="avg">
-              <br>
-              <br>
-              <input type="submit">
-            </fieldset>
-          </form>
-         <br>
+            <li><a href="">Contact Us</a></li>
 
-          <div id="ShopsLocation">
+        </ul>
+    </header>
+    <main>
+        <img src="/img/chinook.jpg" id="chinook" alt="">
+
+
+        <form id='salesForm'>
+            <fieldset>
+                <legend>Location information</legend>
+                <label for="name">Shop name</label>
+                <input type="text" placeholder="Name" id="name">
+                <br>
+                <br>
+                <label for="minCust">Minimum number of customers </label>
+                <input type="number" placeholder="0" id="minCust" >
+                <br>
+                <br>
+                <label for="maxCust">Maximum number of customers </label>
+                <input type="number" placeholder="0" id="maxCust">
+                <br>
+                <br>
+                <label for="avg">Average number of customers </label>
+                <input type="float" placeholder="0.0" id="avg">
+                <br>
+                <br>
+                <input type="submit" id="submit">
+            </fieldset>
+        </form>
+        <br>
+
+        <div id="ShopsLocation">
         </div>
     </main>
-    <footer></footer> 
+    <footer>
+        ALL RIGHTS RESERVED @2020 SALMON COOKIES
+    </footer>
 
     <script src="js/app.js"></script>
 </body>
+
 </html>
